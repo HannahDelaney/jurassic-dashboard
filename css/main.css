@@ -3,3 +3,13 @@ html {
   color: #6feff9;
   font-family: "Ubuntu Mono", monospace;
 }
+
+li {
+  list-style-type: none;
+}
+
+.action-tools-top,
+.action-tools-bottom {
+  display: flex;
+  justify-content: center;
+}
