@@ -10,7 +10,7 @@ li {
 
 .warning {
   animation: warning 1s ease-in-out infinite;
-  transform-origin: center center;
+  transform-origin: 681px 1356px;
 }
 
 @keyframes warning {
@@ -36,7 +36,7 @@ li {
 }
 
 .labels {
-  border: #6feff9 solid 1px;
+  border: #6feff9 dashed 1px;
   top: 0;
   right: 0;
   padding: .2rem .75rem;
@@ -53,25 +53,44 @@ menu {
 }
 
 .action-tools-top {
-  border-top: #6feff9 solid 1px;
-  border-bottom: #6feff9 solid 1px;
-  border-left: #6feff9 solid 1px;
+  border-top: #6feff9 dashed 1px;
+  border-bottom: #6feff9 dashed 1px;
+  border-left: #6feff9 dashed 1px;
   padding: .5rem;
+}
+
+.dashboard-stats,
+.dashboard-videos {
+  border: #6feff9 dashed 1px;
 }
 
 .action-btn svg {
   color: #6feff9;
 }
 
+#yellow {
+  fill: #ffd31d;
+}
+
+#red {
+  fill: #f62e52;
+}
+
 #yellow,
 #red {
-  animation: chart 1s ease-in;
+  animation: chart 1s linear forwards;
+  transform-origin: 0 759px;
+  transform: scaleY(0);
 }
 
 @keyframes chart {
 
-  to {
-    stroke-dashoffset: 0px;
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
   }
 
 }
